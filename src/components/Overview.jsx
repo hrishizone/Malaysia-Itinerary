@@ -9,8 +9,8 @@ const STOPS = days.reduce((a, d) => a + d.blocks.length, 0)
 const STATS = [
   { n: 7, suffix: '', label: 'days on the ground', sub: 'One of them starts at 05:45' },
   { n: STOPS, suffix: '', label: 'timed stops', sub: 'Every one costed and explained' },
-  { n: 7700, suffix: ' km', label: 'covered', sub: 'Air, rail, a rental car and 57 km on foot' },
-  { n: 85000, prefix: '₹', label: 'total budget', sub: 'Flights, hotels, tickets, food' },
+  { n: 7700, suffix: ' km', label: 'covered', sub: 'Air, rail, a rental car and 48 km on foot' },
+  { n: 80000, prefix: '₹', label: 'total budget', sub: 'Flights, hotels, tickets, food' },
 ]
 
 export default function Overview() {

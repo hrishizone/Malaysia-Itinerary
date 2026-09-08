@@ -64,7 +64,7 @@ export default function Nav() {
             <span className="leading-tight">
               <span className="block font-display text-[15px] font-bold text-white">Langkawi to Lumpur</span>
               <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-[0.28em] text-white/35">
-                7 days · ₹85,000
+                7 days · ₹80,000
               </span>
             </span>
           </a>

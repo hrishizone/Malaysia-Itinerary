@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
           ))}
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-2xl font-bold text-songket-300 sm:text-3xl">₹85,000</span>
+            <span className="font-display text-2xl font-bold text-songket-300 sm:text-3xl">₹80,000</span>
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/45">all in</span>
           </div>
         </motion.div>

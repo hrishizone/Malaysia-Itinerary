@@ -35,7 +35,7 @@ export default function Budget() {
         eyebrow="Where every rupee goes"
         title={
           <>
-            ₹85,000, <span className="gradient-text">accounted for</span>.
+            ₹80,000, <span className="gradient-text">accounted for</span>.
           </>
         }
         lead="Not an estimate — this is the sum of every line item in the seven days above, plus the fixed costs you pay before you leave home. It balances to the rupee. Switch the style of travel and watch it move."
@@ -194,20 +194,20 @@ export default function Budget() {
                 {over ? (
                   <>
                     <strong className="text-hibiscus-200">{inr(total - budget.total)} over</strong> the
-                    ₹85,000 target.
+                    ₹80,000 target.
                     <br />
-                    Comfort mode is a ₹1.14 lakh trip — worth knowing.
+                    Comfort mode is a ₹1.07 lakh trip — worth knowing.
                   </>
                 ) : exact ? (
                   <>
                     <strong className="text-lagoon-300">Exactly on target</strong>, to the rupee.
                     <br />
-                    ₹4,780 of it is still unspent buffer — your emergency fund, not your shopping money.
+                    ₹2,900 of it is unspent — that is your Chinatown money and your contingency, together.
                   </>
                 ) : (
                   <>
                     <strong className="text-lagoon-300">{inr(budget.total - total)} under</strong> the
-                    ₹85,000 target.
+                    ₹80,000 target.
                     <br />
                     That is what a shoestring week actually saves you.
                   </>

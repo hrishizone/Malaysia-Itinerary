@@ -1,10 +1,10 @@
 // ─────────────────────────────────────────────────────────────
-//  LANGKAWI TO LUMPUR — 7 days across Malaysia on ₹85,000
+//  LANGKAWI TO LUMPUR — 7 days across Malaysia on ₹80,000
 //  All prices in ₹ (INR). RM1 ≈ ₹21 (rate used throughout).
 //
 //  The arithmetic balances: every block cost below rolls up into
 //  a day's `spend`, every day's spend rolls up into the budget,
-//  and the budget lines sum to exactly ₹85,000.
+//  and the budget lines sum to exactly ₹80,000.
 // ─────────────────────────────────────────────────────────────
 
 export const MYR = 21 // ₹ per RM1
@@ -14,8 +14,8 @@ export const meta = {
   subtitle: 'Seven Days Across Malaysia',
   tagline: 'Langkawi · Kuala Lumpur',
   blurb:
-    'Ninety-nine islands of limestone older than the Himalaya, a 452-metre pair of towers, and a week that runs almost entirely on roti canai — three days of sea in Langkawi, four in a capital named after a muddy river fork, all inside ₹85,000 with both flights in it.',
-  totalBudget: 85000,
+    'Ninety-nine islands of limestone older than the Himalaya, a 452-metre pair of towers, and a week that runs almost entirely on roti canai — three days of sea in Langkawi, four in a capital named after a muddy river fork, all inside ₹80,000 with both flights in it.',
+  totalBudget: 80000,
   days: 7,
   cities: 2,
   islands: 99,
@@ -69,7 +69,7 @@ export const cities = [
     coords: { x: 70, y: 73 },
     oneLiner:
       'A federal capital built from scratch on a rubber plantation in the 1990s, arranged around an artificial lake and a rose-pink mosque.',
-    knownFor: ['Masjid Putra', 'Perdana Putra', 'Seri Wawasan Bridge', 'Lake cruise'],
+    knownFor: ['Masjid Putra', 'Perdana Putra', 'Seri Wawasan Bridge', 'Dataran Putra'],
     stayArea: 'Not a place to sleep — it is 20 minutes from KL Sentral by KLIA Transit and a half-day trip.',
   },
 ]
@@ -87,7 +87,7 @@ export const days = [
     hotelId: 'langkawi',
     stayCost: 2500,
     stay: 'Pantai Cenang beachfront 3★',
-    walkKm: 6.4,
+    walkKm: 5.8,
     spend: 9915,
     highlight:
       'Standing under the twelve-metre eagle at Dataran Lang at dusk, working out that the island is named after it — helang kawi, the reddish-brown eagle.',
@@ -188,16 +188,6 @@ export const days = [
         tag: 'Transport',
       },
       {
-        time: '17:15',
-        icon: 'landmark',
-        wiki: ['Kuah, Langkawi', 'Langkawi'],
-        title: 'Dataran Lang — the twelve-metre eagle',
-        detail:
-          'The brahminy kite, wings up, standing over the ferry harbour since 1996. It is here because of the etymology: legend has it Langkawi comes from helang (eagle) and kawi (reddish-brown). Go at golden hour, stand to the left of it, and get the Kedah hills in the frame.',
-        cost: 0,
-        tag: 'Free',
-      },
-      {
         time: '18:00',
         icon: 'shopping',
         title: 'The Kuah pasar malam',
@@ -215,15 +205,6 @@ export const days = [
           'Pick your fish off the ice, watch it go onto the grill wrapped in banana leaf with sambal packed into the slashes. A whole ikan pari (stingray) or siakap (barramundi) with rice and kangkung comes to RM40 for two. The waterfront restaurants along Jalan Persiaran Putera all do it and they are all fine.',
         cost: 840,
         tag: 'Must-eat',
-      },
-      {
-        time: '21:15',
-        icon: 'shopping',
-        title: 'The duty-free reconnaissance run',
-        detail:
-          'Langkawi has been a duty-free island since 1987 — chocolate, liquor, cookware and perfume at a third to half of mainland prices. Do not buy tonight. Look at prices, then buy on Day 4 on the way to the airport so you are not carrying six kilos of Toblerone up a mountain.',
-        cost: 0,
-        tag: 'Local',
       },
       {
         time: '22:00',
@@ -254,7 +235,7 @@ export const days = [
     hotelId: 'langkawi',
     stayCost: 2500,
     stay: 'Pantai Cenang beachfront 3★',
-    walkKm: 5.1,
+    walkKm: 4.6,
     spend: 7355,
     highlight:
       'Cutting the engine inside the Hole in the Wall, where the boat slides through a gap in a limestone cliff that is 450 million years old and about four metres wide.',
@@ -361,28 +342,20 @@ export const days = [
         tag: 'Photo',
       },
       {
-        time: '18:00',
-        icon: 'sunset',
-        title: 'Sunset at Pantai Tengah',
-        detail:
-          'Cenang’s quieter southern neighbour, past the headland. Fewer jet skis, same sun, and the beach bars here put their bean bags at the waterline. Sunset is around 19:15 year-round — Malaysia is one time zone stretched across two, so the sun sets late.',
-        cost: 0,
-        tag: 'Free',
-      },
-      {
         time: '19:30',
         icon: 'food',
-        title: 'Seafood grill on Pantai Tengah',
+        title: 'Seafood grill back on Cenang',
         detail:
-          'Tiger prawns, squid, a whole fish, kangkung belacan and rice, eaten with your feet in the sand. RM45 a head at the beachfront places along Jalan Teluk Baru. Check the price per 100g before you point at the big prawns.',
+          'Tiger prawns, squid, a whole fish, kangkung belacan and rice, eaten with your feet in the sand. RM45 a head at the beachfront places along Jalan Pantai Cenang. Check the price per 100g before you point at the big prawns.',
         cost: 950,
         tag: 'Splurge',
       },
       {
         time: '21:00',
         icon: 'moon',
-        title: 'Back to Cenang',
-        detail: 'Ten minutes up the coast road. Charge everything — tomorrow is the cable car and the jet ski.',
+        title: 'Bed by ten',
+        detail:
+          'Charge everything and set the alarm — tomorrow is the longest day of the week: the north coast, the jet ski and the cable car.',
         cost: 0,
       },
     ],
@@ -406,7 +379,7 @@ export const days = [
     hotelId: 'langkawi',
     stayCost: 2500,
     stay: 'Pantai Cenang beachfront 3★',
-    walkKm: 7.8,
+    walkKm: 6.9,
     spend: 10460,
     highlight:
       'Walking out onto a 125-metre curved deck slung under a single pylon at 660 metres, with the Andaman Sea on one side and nothing at all on the other.',
@@ -486,16 +459,6 @@ export const days = [
         tag: 'Best view',
       },
       {
-        time: '15:00',
-        icon: 'walk',
-        wiki: ['Telaga Tujuh Waterfalls', 'Langkawi'],
-        title: 'Telaga Tujuh — the Seven Wells',
-        detail:
-          'Back at the bottom, a ten-minute drive and a stiff 638-step climb takes you to seven linked rock pools that spill into each other down the mountainside. Malay legend says fairies bathed here. In the dry months it is a trickle; after rain it is spectacular and slippery.',
-        cost: 0,
-        tag: 'Hidden gem',
-      },
-      {
         time: '16:45',
         icon: 'bus',
         title: 'Drive to Pantai Cenang',
@@ -568,20 +531,11 @@ export const days = [
     hotelId: 'kl',
     stayCost: 3100,
     stay: 'Bukit Bintang 3★',
-    walkKm: 7.2,
-    spend: 8275,
+    walkKm: 6.8,
+    spend: 7855,
     highlight:
       'Coming up the escalator at Bukit Bintang monorail at eight in the evening into heat, neon, six lanes of traffic and the smell of grilled chicken — about four hours after standing on an empty beach.',
     blocks: [
-      {
-        time: '07:30',
-        icon: 'shopping',
-        title: 'The duty-free run, then the airport road',
-        detail:
-          'Last stop at the Cenang duty-free shops. Chocolate is the thing genuinely worth carrying — Toblerone, Ferrero and Cadbury at roughly a third of Indian prices — plus kitchenware and perfume. Liquor is cheap but you are limited to two litres coming into India.',
-        cost: 420,
-        tag: 'Local',
-      },
       {
         time: '09:00',
         icon: 'bus',
@@ -707,8 +661,8 @@ export const days = [
     hotelId: 'kl',
     stayCost: 3100,
     stay: 'Bukit Bintang 3★',
-    walkKm: 9.6,
-    spend: 8210,
+    walkKm: 8.8,
+    spend: 7580,
     highlight:
       'The Skybridge at level 41 — a two-storey, 58-metre link that is not bolted to either tower but sits on a hinge, so it can slide as the buildings move in the wind.',
     blocks: [
@@ -768,15 +722,6 @@ export const days = [
           'A cable-stayed bridge with a forward-raked mast that looks like a ship under sail, and lights up at night in colours. Fifteen minutes’ walk around the lake edge from the mosque, and almost nobody does it.',
         cost: 0,
         tag: 'Photo',
-      },
-      {
-        time: '12:15',
-        icon: 'ship',
-        title: 'Cruise Tasik Putrajaya',
-        detail:
-          'A 25-minute boat loop of the lake past the mosque, the bridges and the convention centre, RM30 on the electric boat. It is the only way to see how deliberately the whole city was composed — nothing here is older than 1995.',
-        cost: 630,
-        tag: 'Optional',
       },
       {
         time: '13:15',
@@ -875,14 +820,14 @@ export const days = [
     city: 'kl',
     date: 'Day 6',
     title: 'Chinatown, and the Greatest Food Street in Asia',
-    subtitle: 'Petaling Street · Kwai Chai Hong · the Islamic Arts Museum · Jalan Alor',
+    subtitle: 'Petaling Street for the fakes · Jalan Alor for everything else',
     wiki: ['Petaling Street', 'Chinatown, Kuala Lumpur', 'Kuala Lumpur'],
     accent: '#f2b138',
     hotelId: 'kl',
     stayCost: 3100,
     stay: 'Bukit Bintang 3★',
-    walkKm: 11.3,
-    spend: 7420,
+    walkKm: 7.4,
+    spend: 5500,
     highlight:
       'Jalan Alor at nine at night — four hundred metres of plastic stools, charcoal smoke and shouting, where you order from six different stalls onto one table and nobody minds.',
     blocks: [
@@ -904,16 +849,6 @@ export const days = [
         tag: 'Transport',
       },
       {
-        time: '09:45',
-        icon: 'landmark',
-        wiki: ['Sri Mahamariamman Temple, Kuala Lumpur'],
-        title: 'Sri Mahamariamman Temple',
-        detail:
-          'The oldest Hindu temple in Kuala Lumpur, founded in 1873, with a 22-metre gopuram over the entrance carrying 228 sculpted deities. Shoes off, and the silver chariot inside is the one that carries Murugan to Batu Caves at Thaipusam.',
-        cost: 0,
-        tag: 'Free',
-      },
-      {
         time: '10:30',
         icon: 'walk',
         wiki: ['Petaling Street'],
@@ -924,25 +859,6 @@ export const days = [
         tag: 'Free',
       },
       {
-        time: '11:15',
-        icon: 'palette',
-        title: 'Kwai Chai Hong',
-        detail:
-          'A dead-end lane off Jalan Petaling, derelict for decades, restored in 2019 with murals that reconstruct 1960s Chinatown life — the mahjong game, the letter writer, the girl on the balcony. Free, quiet, and about ninety seconds from the loudest street in the city.',
-        cost: 0,
-        tag: 'Hidden gem',
-      },
-      {
-        time: '12:00',
-        icon: 'shopping',
-        wiki: ['Central Market, Kuala Lumpur'],
-        title: 'Central Market (Pasar Seni)',
-        detail:
-          'A 1928 art-deco wet market, saved from demolition and now the best place in the country to buy things worth carrying home: batik, pewter, songket, wood carving. Fixed prices upstairs, negotiable down. This is your souvenir stop — budget about RM45.',
-        cost: 900,
-        tag: 'Local',
-      },
-      {
         time: '13:00',
         icon: 'food',
         wiki: ['Bak kut teh'],
@@ -951,26 +867,6 @@ export const days = [
           'Pork ribs simmered for hours with garlic, star anise, cinnamon and dark soy until the meat gives up, served with rice, youtiao for dipping and bitter Chinese tea. It was invented up the road in Klang for dock workers. RM23. (Not halal — the Muslim equivalent, chik kut teh, uses chicken.)',
         cost: 480,
         tag: 'Must-eat',
-      },
-      {
-        time: '14:15',
-        icon: 'museum',
-        wiki: ['Islamic Arts Museum Malaysia'],
-        title: 'Islamic Arts Museum Malaysia',
-        detail:
-          'The best museum in Malaysia and not close: twelve galleries of Qurans, Ottoman armour, Chinese Islamic ceramics and a room of scale architectural models — the Dome of the Rock, the Taj Mahal — under domes tiled by Iranian craftsmen. RM20, air-conditioned, and you could lose three hours.',
-        cost: 420,
-        tag: 'Worth it',
-      },
-      {
-        time: '16:00',
-        icon: 'landmark',
-        wiki: ['Thean Hou Temple'],
-        title: 'Thean Hou Temple',
-        detail:
-          'A six-tier Chinese temple on a hill in Robson Heights, ten minutes by Grab, built by the Hainanese community in 1987 and hung with hundreds of red lanterns. Go late in the afternoon for the light, and for the view back across the city to the towers.',
-        cost: 250,
-        tag: 'Photo',
       },
       {
         time: '18:00',
@@ -999,23 +895,14 @@ export const days = [
         cost: 400,
         tag: 'Must-eat',
       },
-      {
-        time: '22:00',
-        icon: 'sparkles',
-        title: 'Durian, if you dare',
-        detail:
-          'The stalls at the Bukit Bintang end sell Musang King by the kilo, opened in front of you, eaten standing at a plastic table. RM17 for a taste-sized portion. Your hotel will have a sign banning it from the rooms, and they mean it.',
-        cost: 350,
-        tag: 'Do it',
-      },
     ],
     tips: [
       'The Dark Cave at Batu Caves tomorrow has been closed to the public for conservation — do not plan around it. The Temple Cave and Ramayana Cave are open.',
       'Chinatown’s stalls sell fakes openly and Malaysian customs do not care, but Indian customs might. Buy the batik and the pewter instead.',
-      'The Islamic Arts Museum shuts at 18:00 and the last entry is 17:30. Do not arrive at five.',
+      'Petaling Street is quiet before eleven and shoulder-to-shoulder after seven. Go in the morning to shop and haggle, come back to Bukit Bintang for the evening.',
       'Jalan Alor prices are not marked at every stall. Ask "berapa?" before they cook — not because anyone is cheating you, but because seafood is priced by weight.',
     ],
-    eat: ['Bak kut teh', 'Char kway teow', 'Satay', 'Kaya toast', 'Durian'],
+    eat: ['Bak kut teh', 'Char kway teow', 'Satay', 'Kaya toast'],
   },
 
   {
@@ -1029,8 +916,8 @@ export const days = [
     hotelId: null,
     stayCost: 0,
     stay: 'Night flight home',
-    walkKm: 9.8,
-    spend: 2285,
+    walkKm: 7.6,
+    spend: 2135,
     highlight:
       'Coming up the last of the 272 painted steps at half past seven, before the heat and the coaches, with the 42.7-metre gold Murugan below you and the cave opening overhead.',
     blocks: [
@@ -1063,15 +950,6 @@ export const days = [
         tag: 'Unmissable',
       },
       {
-        time: '08:15',
-        icon: 'mountain',
-        title: 'Ramayana Cave',
-        detail:
-          'Off to the left at the base, past a 15-metre Hanuman, and almost empty at this hour. Inside, the Ramayana is told in painted dioramas along the cave walls, lit in colours, all the way to a chamber at the back. RM7 and the best-value ticket of the week.',
-        cost: 150,
-        tag: 'Worth it',
-      },
-      {
         time: '09:00',
         icon: 'camera',
         title: 'The macaques — and the plastic bag rule',
@@ -1092,21 +970,11 @@ export const days = [
       {
         time: '11:00',
         icon: 'train',
-        title: 'Komuter back, then walk to Masjid Jamek',
+        title: 'Komuter back, then on to Merdeka Square',
         detail:
-          'Back to KL Sentral and two stops on the LRT, or a fifteen-minute walk from Pasar Seni along the river.',
+          'Back to KL Sentral and two stops on the LRT to Masjid Jamek station, or a fifteen-minute walk from Pasar Seni along the river.',
         cost: 110,
         tag: 'Transport',
-      },
-      {
-        time: '11:45',
-        icon: 'landmark',
-        wiki: ['Jamek Mosque'],
-        title: 'Masjid Jamek, at the confluence that named the city',
-        detail:
-          'Built in 1909 in Mughal-revival brick and standing exactly where the Klang and Gombak rivers meet — the muddy confluence that gives Kuala Lumpur its name. The rivers were dyed blue and lit as the River of Life project in 2017; the mosque is free and open outside prayer times.',
-        cost: 0,
-        tag: 'Free',
       },
       {
         time: '12:30',
@@ -1117,16 +985,6 @@ export const days = [
           'The cricket padang where the Union flag came down and the Malayan flag went up at midnight on 31 August 1957. On one side the mock-Tudor Royal Selangor Club, on the other Sultan Abdul Samad’s copper domes and 41-metre clock tower, finished in 1897 for the colonial secretariat.',
         cost: 0,
         tag: 'Iconic',
-      },
-      {
-        time: '13:15',
-        icon: 'building',
-        wiki: ['Merdeka 118'],
-        title: 'Merdeka 118, from the padang',
-        detail:
-          'Look south-east from the square and the 678.9-metre spire of Merdeka 118 closes the view — finished in 2023, and the second-tallest building on earth after the Burj Khalifa. It stands over the stadium where independence was declared, which is the entire idea.',
-        cost: 0,
-        tag: 'Photo',
       },
       {
         time: '14:00',
@@ -1189,12 +1047,12 @@ export const days = [
 // above, plus the fixed costs you pay before leaving home.
 export const budget = {
   currency: '₹',
-  total: 85000,
+  total: 80000,
   modes: {
     shoestring: {
       label: 'Shoestring',
       mult: 0.78,
-      note: 'Hostel dorms, scooter instead of a car, no jet ski, no lake cruise, hawker food only.',
+      note: 'Hostel dorms, scooter instead of a car, no jet ski, no cable car, hawker food only.',
     },
     balanced: { label: 'Balanced', mult: 1, note: 'The itinerary exactly as written. This is the plan.' },
     comfort: {
@@ -1221,30 +1079,30 @@ export const budget = {
     {
       cat: 'Food & drink',
       label: '7 days of eating, properly',
-      amount: 12230,
+      amount: 11880,
       color: '#3ddbd0',
-      note: '≈₹1,750 a day for two full meals and a street breakfast. Malaysia is the rare country where the cheapest food is also the best.',
+      note: '≈₹1,700 a day for two full meals and a street breakfast. Malaysia is the rare country where the cheapest food is also the best.',
     },
     {
       cat: 'Activities',
-      label: 'Kilim boat, jet ski, SkyCab, Petronas, museums, caves',
-      amount: 10945,
+      label: 'Kilim boat, jet ski, SkyCab and Sky Bridge, Petronas',
+      amount: 9745,
       color: '#fb5c85',
-      note: 'The jet ski (₹3,150) and the SkyCab (₹1,790) are the two biggest. Cut both and this line halves.',
+      note: 'Four tickets, and the jet ski (₹3,150) and SkyCab (₹1,790) are two of them. Batu Caves, Merdeka Square and Putra Mosque are all free.',
     },
     {
       cat: 'Local transport',
       label: 'Langkawi rental car, KL rail, Grab, airport links',
-      amount: 10025,
+      amount: 9775,
       color: '#12bdb6',
       note: 'The car is ₹5,355 of it for three days. KL costs almost nothing to move around: ₹60 a ride.',
     },
     {
       cat: 'Shopping & buffer',
-      label: 'Duty-free, Central Market, contingency',
-      amount: 6100,
+      label: 'Petaling Street, duty-free, contingency',
+      amount: 2900,
       color: '#cd8d1c',
-      note: '₹1,320 of it is already spent in the day plans. The other ₹4,780 is genuine untouched buffer.',
+      note: 'Nothing in the day plans touches this — it is the whole of your Chinatown shopping and your contingency. Add to it if you intend to shop hard.',
     },
     {
       cat: 'Internal flight',
@@ -1676,8 +1534,8 @@ export const packing = [
 
 export const faq = [
   {
-    q: 'Is ₹85,000 genuinely enough for 7 days in Malaysia including flights?',
-    a: 'Yes, comfortably, and this plan proves it line by line. Flights take ₹24,000, leaving ₹61,000 for the ground — which goes a long way in a country where a superb meal is ₹250 and a train ride is ₹60. The seven days above spend ₹53,920 on the ground; add the flights, insurance and eSIM and the plan lands at ₹80,220, leaving ₹4,780 of real buffer inside ₹85,000. The two things that will blow it are booking flights late and taking Grab everywhere in Langkawi instead of renting a car.',
+    q: 'Is ₹80,000 genuinely enough for 7 days in Malaysia including flights?',
+    a: 'Yes, and this plan proves it line by line. Flights take ₹24,000, leaving ₹56,000 for the ground — which goes a long way in a country where a superb meal is ₹250 and a train ride is ₹60. The seven days above spend ₹50,800 on the ground; add the flights, insurance and eSIM and the plan lands at ₹77,100, leaving ₹2,900 inside ₹80,000 for Chinatown and contingency. That last line is the thin one: if you plan to shop properly on Petaling Street, budget for it on top. The two things that will blow the rest are booking flights late and taking Grab everywhere in Langkawi instead of renting a car.',
   },
   {
     q: 'Do Indians need a visa for Malaysia right now?',
@@ -1705,7 +1563,7 @@ export const faq = [
   },
   {
     q: 'Is Langkawi’s duty-free actually worth it?',
-    a: 'For chocolate, genuinely yes — Toblerone, Ferrero and Cadbury run at roughly a third of Indian prices, and it is the one thing worth filling a bag with. Kitchenware and perfume are decent value. Alcohol is very cheap but India only lets you bring back two litres per adult, so the bargain has a hard ceiling. Do the buying on your last morning, not on Day 1 — carrying six kilos of chocolate up a mountain in 33°C is a mistake you only make once.',
+    a: 'For chocolate, genuinely yes — Toblerone, Ferrero and Cadbury run at roughly a third of Indian prices, and it is the one thing worth filling a bag with. Kitchenware and perfume are decent value. Alcohol is very cheap but India only lets you bring back two litres per adult, so the bargain has a hard ceiling. The shops are all over Cenang and Kuah, so buy on your last morning rather than on Day 1 — carrying six kilos of chocolate up a mountain in 33°C is a mistake you only make once.',
   },
 ]
 
@@ -1732,6 +1590,6 @@ export const gallery = [
     caption: 'Where the flag went up in 1957',
     city: 'Kuala Lumpur',
   },
-  { wiki: ['Jamek Mosque'], caption: 'The muddy confluence that named a capital', city: 'Kuala Lumpur' },
-  { wiki: ['Merdeka 118'], caption: '678.9 m — only one building is taller', city: 'Kuala Lumpur' },
+  { wiki: ['Bukit Bintang', 'Kuala Lumpur'], caption: 'Bukit Bintang, which never closes', city: 'Kuala Lumpur' },
+  { wiki: ['Jalan Alor', 'Bukit Bintang'], caption: 'Jalan Alor, four hundred metres of charcoal smoke', city: 'Kuala Lumpur' },
 ]

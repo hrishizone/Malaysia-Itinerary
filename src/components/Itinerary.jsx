@@ -270,9 +270,9 @@ export default function Itinerary() {
               the ground.
             </p>
             <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-relaxed text-white/45">
-              The remaining {inr(85000 - days.reduce((a, x) => a + x.spend, 0))} covers both flights, your
-              insurance and the eSIM — and still leaves ₹4,780 of genuine buffer. The full arithmetic is
-              below.
+              The remaining {inr(80000 - days.reduce((a, x) => a + x.spend, 0))} covers both flights, your
+              insurance and the eSIM — and leaves ₹2,900 for Chinatown and contingency. The full
+              arithmetic is below.
             </p>
           </div>
         </Reveal>

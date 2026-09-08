@@ -5,11 +5,15 @@ import { Reveal, SectionHeading, inr } from './ui'
 // Positions are schematic but geographically faithful in their relationships:
 // Bangalore far to the north-west, Langkawi at the top of the peninsula's
 // west coast, Kuala Lumpur 480 km south of it, Putrajaya just below KL.
+// `side` places the label block left or right of the dot. Every label is
+// anchored away from the canvas edge and away from its neighbours, because
+// centring them all put "Bangalore" half off the left edge and stacked the
+// Kuala Lumpur and Putrajaya labels on top of each other.
 const NODES = [
-  { id: 'bangalore', name: 'Bangalore', jawi: 'بڠلور', x: 9, y: 20, color: '#ffffff', note: 'BLR T2' },
-  { id: 'langkawi', name: 'Langkawi', jawi: 'لڠكاوي', x: 61, y: 40, color: '#12bdb6', note: 'Days 1–3' },
-  { id: 'kl', name: 'Kuala Lumpur', jawi: 'كوالا لومڤور', x: 73, y: 63, color: '#e4315c', note: 'Days 4–7' },
-  { id: 'putrajaya', name: 'Putrajaya', jawi: 'ڤوتراجاي', x: 71, y: 78, color: '#f2b138', note: 'Day 5' },
+  { id: 'bangalore', name: 'Bangalore', x: 13, y: 21, color: '#ffffff', note: 'BLR T2', side: 'right' },
+  { id: 'langkawi', name: 'Langkawi', x: 62, y: 43, color: '#12bdb6', note: 'Days 1–3', side: 'right' },
+  { id: 'kl', name: 'Kuala Lumpur', x: 74, y: 65, color: '#e4315c', note: 'Days 4–7', side: 'left' },
+  { id: 'putrajaya', name: 'Putrajaya', x: 60, y: 79, color: '#f2b138', note: 'Day 5', side: 'left' },
 ]
 
 const LEGS = [
@@ -49,11 +53,16 @@ function arc(a, b, bow = 14) {
 
 const N = Object.fromEntries(NODES.map((n) => [n.id, n]))
 
+// Delays kept short so the whole map has settled about a second after it
+// scrolls into view, rather than still drawing itself four seconds later.
 const PATHS = [
-  { d: arc(N.bangalore, N.langkawi, 11), color: '#ffffff', dash: '3 3', delay: 0 },
-  { d: arc(N.langkawi, N.kl, -7), color: '#12bdb6', dash: '0', delay: 0.9 },
-  { d: arc(N.kl, N.putrajaya, -5), color: '#f2b138', dash: '0', delay: 1.6 },
-  { d: arc(N.kl, N.bangalore, 17), color: '#ffffff', dash: '3 3', delay: 2.3 },
+  { d: arc(N.bangalore, N.langkawi, 10), color: '#ffffff', dash: '3 3', delay: 0 },
+  { d: arc(N.langkawi, N.kl, -6), color: '#12bdb6', dash: '0', delay: 0.25 },
+  // Both bows are negative on purpose: the rail leg swings east so it clears
+  // the Kuala Lumpur label, and the return flight swings west so it reads as a
+  // separate line rather than retracing the outbound one.
+  { d: arc(N.kl, N.putrajaya, -5), color: '#f2b138', dash: '0', delay: 0.6 },
+  { d: arc(N.kl, N.bangalore, -20), color: '#ffffff', dash: '3 3', delay: 0.45 },
 ]
 
 export default function RouteMap() {
@@ -113,7 +122,7 @@ export default function RouteMap() {
                         // pathLength would override the dash pattern, so fade these in
                         initial: { opacity: 0 },
                         whileInView: { opacity: 0.4 },
-                        transition: { duration: 1.1, delay: p.delay },
+                        transition: { duration: 0.9, delay: p.delay },
                       })}
                   viewport={{ once: true, margin: '-60px' }}
                 />
@@ -126,61 +135,64 @@ export default function RouteMap() {
                 </circle>
               ))}
 
-              {NODES.map((n, i) => (
-                <g key={n.id}>
-                  <motion.circle
-                    cx={n.x}
-                    cy={n.y}
-                    r="4.5"
-                    fill={n.color}
-                    opacity="0.14"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: [0, 1.35, 1] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.1, delay: 0.5 + i * 0.35 }}
-                    style={{ transformOrigin: `${n.x}px ${n.y}px` }}
-                  />
-                  <motion.circle
-                    cx={n.x}
-                    cy={n.y}
-                    r="1.7"
-                    fill={n.color}
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 300, delay: 0.5 + i * 0.35 }}
-                    style={{ transformOrigin: `${n.x}px ${n.y}px` }}
-                  />
-                  <motion.text
-                    x={n.x}
-                    y={n.y - 6.2}
-                    textAnchor="middle"
-                    fill="#fff"
-                    fontSize="3.6"
-                    fontWeight="700"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8 + i * 0.35 }}
-                  >
-                    {n.name}
-                  </motion.text>
-                  <motion.text
-                    x={n.x}
-                    y={n.y + 8.4}
-                    textAnchor="middle"
-                    fill={n.color}
-                    fontSize="2.5"
-                    opacity="0.75"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 0.75 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.95 + i * 0.35 }}
-                  >
-                    {n.note}
-                  </motion.text>
-                </g>
-              ))}
+              {NODES.map((n, i) => {
+                const right = n.side === 'right'
+                const lx = n.x + (right ? 4.6 : -4.6)
+                return (
+                  <g key={n.id}>
+                    <motion.circle
+                      cx={n.x}
+                      cy={n.y}
+                      r="4.5"
+                      fill={n.color}
+                      opacity="0.14"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: [0, 1.35, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.9, delay: 0.2 + i * 0.18 }}
+                      style={{ transformOrigin: `${n.x}px ${n.y}px` }}
+                    />
+                    <motion.circle
+                      cx={n.x}
+                      cy={n.y}
+                      r="1.7"
+                      fill={n.color}
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: 'spring', stiffness: 300, delay: 0.2 + i * 0.18 }}
+                      style={{ transformOrigin: `${n.x}px ${n.y}px` }}
+                    />
+                    <motion.text
+                      x={lx}
+                      y={n.y - 0.4}
+                      textAnchor={right ? 'start' : 'end'}
+                      fill="#fff"
+                      fontSize="3.4"
+                      fontWeight="700"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 + i * 0.18 }}
+                    >
+                      {n.name}
+                    </motion.text>
+                    <motion.text
+                      x={lx}
+                      y={n.y + 3.9}
+                      textAnchor={right ? 'start' : 'end'}
+                      fill={n.color}
+                      fontSize="2.5"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 0.8 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 + i * 0.18 }}
+                    >
+                      {n.note}
+                    </motion.text>
+                  </g>
+                )
+              })}
             </svg>
 
             <div className="relative mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/8 pt-4 text-[11px] text-white/45">

@@ -12,7 +12,7 @@ export default function Footer() {
             <h2 className="heading mx-auto max-w-3xl text-3xl sm:text-5xl">
               Seven days. Ninety-nine islands.
               <br />
-              <span className="gradient-text">Change from ₹85,000.</span>
+              <span className="gradient-text">Change from ₹80,000.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/45">
               Prices were researched for a 2026 departure at RM1 ≈ ₹21 and will drift — treat every figure
@@ -38,8 +38,8 @@ export default function Footer() {
             <ul className="space-y-1.5 text-white/45">
               <li>7 days · Langkawi → Kuala Lumpur</li>
               <li>{days.reduce((a, d) => a + d.blocks.length, 0)} timed stops, all costed</li>
-              <li>{inr(85000)} total, both flights included</li>
-              <li>A UNESCO Global Geopark and a 678 m spire</li>
+              <li>{inr(80000)} total, both flights included</li>
+              <li>A UNESCO Global Geopark and the world&apos;s tallest twin towers</li>
             </ul>
           </div>
           <div>

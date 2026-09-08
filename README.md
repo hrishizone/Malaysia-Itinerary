@@ -2,11 +2,11 @@
 
 # 🌺 Langkawi to Lumpur
 
-### Seven days across Malaysia, on ₹85,000 — both flights included
+### Seven days across Malaysia, on ₹80,000 — both flights included
 
 **Bangalore → Langkawi → Kuala Lumpur → Bangalore**
 
-An animated, single-page itinerary site: 100 individually timed stops, a UNESCO Global
+An animated, single-page itinerary site: 85 individually timed stops, a UNESCO Global
 Geopark, and a budget that balances to the rupee.
 
 [**→ View the live site**](https://hrishizone.github.io/Malaysia-Itinerary/)
@@ -19,15 +19,18 @@ Geopark, and a budget that balances to the rupee.
 
 Not a listicle. Every stop on this site has a real time, a real price and a reason it
 earns its place — and the seven days add up, line item by line item, to a budget that
-comes in under ₹85,000 with both international flights inside it.
+comes in under ₹80,000 with both international flights inside it.
+
+The stops are exactly the ones in the itinerary this was built from — nothing invented,
+just timed, costed and filled in with the transfers and meals between them.
 
 | | |
 |---|---|
 | **Route** | Bangalore → Langkawi (3 days) → Kuala Lumpur (4 days) → Bangalore |
 | **Duration** | 7 days on the ground, one of them starting at 05:45 |
-| **Total budget** | ₹85,000 — ₹80,220 planned, ₹4,780 genuine buffer |
+| **Total budget** | ₹80,000 — ₹77,100 planned, ₹2,900 for shopping and contingency |
 | **Flights** | ₹24,000 multi-city (in to Langkawi LGK, out of Kuala Lumpur KLIA) |
-| **On the ground** | ₹53,920 across all seven days |
+| **On the ground** | ₹50,800 across all seven days |
 | **Hotels** | 6 nights, ₹16,800 — named properties on Pantai Cenang and in Bukit Bintang |
 | **Rate used** | RM1 ≈ ₹21 throughout |
 
@@ -44,12 +47,12 @@ comes in under ₹85,000 with both international flights inside it.
 
 | Day | Base | The shape of it |
 |---|---|---|
-| 1 | Langkawi | Land, first swim on Cenang, Dataran Lang and the Kuah night market |
+| 1 | Langkawi | Land, settle on Cenang, then the Kuah town night market |
 | 2 | Langkawi | Kilim Karst Geoforest Park by boat, then Gunung Raya at 881 m |
 | 3 | Langkawi | Tanjung Rhu, jet ski, the SkyCab and the Sky Bridge, Cenang after dark |
 | 4 | Kuala Lumpur | Fly down, banana leaf rice, and Bukit Bintang at night |
-| 5 | Kuala Lumpur | Putrajaya and Masjid Putra by morning, Petronas and KLCC by night |
-| 6 | Kuala Lumpur | Chinatown, Kwai Chai Hong, the Islamic Arts Museum, Jalan Alor |
+| 5 | Kuala Lumpur | Putra Mosque and Putrajaya by morning, Petronas and KLCC by night |
+| 6 | Kuala Lumpur | Chinatown for the fakes, Jalan Alor for the food |
 | 7 | Kuala Lumpur | Batu Caves at dawn, Merdeka Square, the night flight home |
 
 ## Sections
@@ -76,15 +79,18 @@ comes in under ₹85,000 with both international flights inside it.
 ## A note on the arithmetic
 
 The numbers reconcile rather than being estimated. Every block cost in the day plans
-rolls into that day's `spend`, the seven days sum to **₹53,920** on the ground, and the
-nine budget lines sum to exactly **₹85,000**:
+rolls into that day's `spend`, the seven days sum to **₹50,800** on the ground, and the
+nine budget lines sum to exactly **₹80,000**:
 
 ```
-₹85,000  total budget
-−₹53,920  spent in the day plans (stays, food, activities, transport, shopping)
+₹80,000  total budget
+−₹50,800  spent in the day plans (stays, food, activities, transport)
  ────────
- ₹31,080  = ₹24,000 flights + ₹1,500 insurance + ₹800 eSIM + ₹4,780 untouched buffer
+ ₹29,200  = ₹24,000 flights + ₹1,500 insurance + ₹800 eSIM + ₹2,900 shopping/contingency
 ```
+
+The shopping line is the thin one: nothing in the day plans touches it, so it is the
+whole of your Petaling Street and duty-free budget. Add to it if you intend to shop.
 
 ## About the photography
 
