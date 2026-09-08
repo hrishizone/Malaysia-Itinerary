@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --edge: rgba(255, 255, 255, 0.08);
+    --glass: rgba(255, 255, 255, 0.045);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+  }
+
+  body {
+    @apply bg-teluk-950 text-white/80 font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Humidity: a hibiscus dawn top-left, lagoon light rising from the foot */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(58rem 40rem at 10% -12%, rgba(228, 49, 92, 0.15), transparent 62%),
+      radial-gradient(46rem 34rem at 94% 6%, rgba(242, 177, 56, 0.11), transparent 62%),
+      radial-gradient(64rem 52rem at 48% 110%, rgba(18, 189, 182, 0.14), transparent 62%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.15;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  #root {
+    position: relative;
+    z-index: 2;
+  }
+
+  ::selection {
+    background: rgba(228, 49, 92, 0.35);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #071916;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#12bdb6, #a01639);
+    border-radius: 99px;
+    border: 2px solid #071916;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass);
+    border: 1px solid var(--edge);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .card-hover {
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.4s,
+      box-shadow 0.5s;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    border-color: rgba(228, 49, 92, 0.4);
+    box-shadow:
+      0 24px 60px -24px rgba(228, 49, 92, 0.4),
+      0 0 0 1px rgba(18, 189, 182, 0.14);
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.32em] text-hibiscus-300/80;
+  }
+
+  .heading {
+    @apply font-display font-bold leading-[1.05] text-white;
+    text-wrap: balance;
+    font-variation-settings: 'SOFT' 20, 'WONK' 1;
+  }
+
+  .gradient-text {
+    background: linear-gradient(100deg, #ffe4a3 0%, #f7c96a 26%, #fb5c85 58%, #3ddbd0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* the fill is transparent, so any inherited text-shadow would show through it */
+    text-shadow: none;
+  }
+
+  /* Jawi — Malay written in Arabic script, still on every ringgit note */
+  .jawi {
+    font-family: 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    unicode-bidi: isolate;
+  }
+
+  /* The songket weave: gold thread on a dark warp, used as a rule */
+  .songket-rule {
+    height: 3px;
+    background-image: repeating-linear-gradient(
+      135deg,
+      rgba(242, 177, 56, 0.85) 0 5px,
+      transparent 5px 11px
+    );
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
